@@ -49,7 +49,15 @@ One click from browser to create new analysis session!
 
 ## Introduction to tmux
 
-## How to use it?
+* Terminal multiplexer
+* A modern alternative to GNU screen
+* Slightly easier to script automated setup of sessions
+
+## tmux crash course for GNU screen users
+
+* Escape key is `Control+b` not `Control+a`
+* Otherwise somewhat similar default bindings
+* `Control+b ?` for other key bindings
 
 ## tmux windows
 
