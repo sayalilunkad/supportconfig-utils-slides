@@ -17,6 +17,17 @@
     * **unpack** - utility for unpacking any kind of archive
     * Some small-ish hacks in Ruby and shell
 
+## Workflow
+
+One click from browser to create new analysis session!
+
+* Automatically unpacks supportconfig
+* Automatically unpacks individual files into `rootfs/`
+* Sets up new tmux session
+* Extracts essential information
+* Determines SUSE product and context (e.g. SOC Crowbar admin node)
+* Launches `lnav` filters
+
 ## Install and Configure
 
 * Install the supportconfig-utils package from OBS:
@@ -35,17 +46,6 @@
   e.g.
 
         SUPPORTCONFIG_UTILS_TMUX_TERMINAL="urxvt-256color -g 200x60 -e"
-
-## Workflow
-
-One click from browser to create new analysis session!
-
-* Automatically unpacks supportconfig
-* Automatically unpacks individual files into `rootfs/`
-* Sets up new tmux session
-* Extracts essential information
-* Determines SUSE product and context (e.g. SOC Crowbar admin node)
-* Launches `lnav` filters
 
 ## Introduction to tmux
 
