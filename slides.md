@@ -47,6 +47,29 @@ One click from browser to create new analysis session!
 
         SUPPORTCONFIG_UTILS_TMUX_TERMINAL="urxvt-256color -g 200x60 -e"
 
+## Introduction to lnav
+
+* `less(1)` on steroids
+* Specialises in timestamped log files
+* Can auto-detect and parse many formats out of the box
+    * even more via `lnav -i extra`
+    * easy to add your own
+* Chronological merging of files
+* `tail -f` watching of live files
+
+## Introduction to lnav (part 2)
+
+Packed with [useful features](http://lnav.org/features)!
+
+* Syntax highlighting
+* Time-based navigation (e.g. jump back 1 hour)
+* Navigation to errors / warnings
+    * including via zoomable histogram!
+* Regexp filtering
+* Data extraction
+* Full SQLite query engine embedded!
+* Command completion
+
 ## Introduction to tmux
 
 * Terminal multiplexer
