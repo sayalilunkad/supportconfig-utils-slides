@@ -1,38 +1,59 @@
 ## Vision for tools
 
-* Deliver **fastest possible path** from being given a supportconfig to start useful debugging
+* Deliver **fastest possible path** from being given
+  supportconfigs to starting useful debugging
 * Make most likely **area to investigate immediately available**
 * Make **debugging as efficient as possible**
+* Provide a **rich UI** for navigating / analysing
+  (potentially many) log files
 * Extend to **support all SUSE products** out of the box
 
 ## Overview of tools used
 
 * supportconfig-utils is built using:
 
-	* **lnav** - Log file navigator
-	* **tmux** - terminal multiplexer
-	* **unpack** - utility for unpacking any kind of archive
-
+    * **lnav** - Log file navigator
+    * **tmux** - terminal multiplexer
+    * **unpack** - utility for unpacking any kind of archive
+    * Some small-ish hacks in Ruby and shell
 
 ## Install and Configure
 
-* Install the supportconfig-utils package (this also installs tmux-lib)
-	* `zypper in supportconfig-utils`
+* Install the supportconfig-utils package from OBS:
+
+    * https://software.opensuse.org/package/supportconfig-utils
+
+  This also installs `tmux-lib` and `unpack`, and sets up
+  MIME types / desktop handlers etc.
 
 * Default terminal session launched using `xdg-terminal`
 
-* Can be changed in ~/.config/supportconfig-utils/tmux-window or /etc/sysconfig/supportconfig-utils
-	* `SUPPORTCONFIG_UTILS_TMUX_TERMINAL="urxvt-256color -g 200x60 -e"`
+* Can be changed in
+    * `~/.config/supportconfig-utils/tmux-window` or
+    * `/etc/sysconfig/supportconfig-utils`
+
+  e.g.
+
+        SUPPORTCONFIG_UTILS_TMUX_TERMINAL="urxvt-256color -g 200x60 -e"
 
 ## Workflow
 
-unpack -> sets up new tmux session -> lnav filters
+One click from browser to create new analysis session!
+
+* Automatically unpacks supportconfig
+* Automatically unpacks individual files into `rootfs/`
+* Sets up new tmux session
+* Extracts essential information
+* Determines SUSE product and context (e.g. SOC Crowbar admin node)
+* Launches `lnav` filters
 
 ## Introduction to tmux
 
 ## How to use it?
 
 ## tmux windows
+
+Currently oriented towards SOCC (please help us change this)
 
 * 0: spare shell window
 * VM: /var/log/messages
