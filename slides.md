@@ -150,3 +150,5 @@ Tip: manually maintain an 'annotations' file with timestamps / comments
 
   * Allows human analysis to be presented in `lnav` views
     alongside the log files.
+
+## Questions?
